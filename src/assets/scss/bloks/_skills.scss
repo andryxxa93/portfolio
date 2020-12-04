@@ -1,0 +1,63 @@
+.skills {
+    padding-top: 120px;
+    .technics {
+        &__grid {
+            margin-top: 60px;
+            padding: 0 10px;
+            display: grid;
+            grid-template: repeat(2, minmax(270px, auto)) / repeat(4, 270px);
+            grid-auto-rows: minmax(270px, auto);
+            gap: 13px;
+        }
+        &__item {
+            padding: 30px 30px 25px 30px;
+            border: 1px solid #000;
+            &-icon {
+                display: flex;
+                align-items: center;
+                min-height: 65px;
+            }
+            &-info {
+                margin-top: 20px;
+            }
+            &-text {
+                margin-top: 15px;
+            }
+        }
+    }
+    &__grid {
+        padding-top: 120px;
+        display: grid;
+        grid-template: repeat(2, minmax(70px, auto)) / repeat(3, 1fr);
+        gap: 35px 45px;
+        &-item {
+            display: grid;
+            grid-template: minmax(21px, auto) 14px / 200px 35px;
+            justify-content: space-between;
+            align-content: space-around;
+        }
+        &-header {
+            padding:2px 0 0 13px;
+            position: relative;
+            @include before_circle;
+        }
+        &-percent {
+            font-size: 14px;
+            line-height: 21px;
+        }
+        &-baseline {
+            grid-column: 1/3;
+            width: 100%;
+            height: 14px;
+            background-color: #E8E4DE;
+            border-radius: 4px;
+            span {
+                display: block;
+                height: 100%;
+                background-color: $main-color;
+                border-radius: 4px;
+            }
+        }
+        
+    }
+}

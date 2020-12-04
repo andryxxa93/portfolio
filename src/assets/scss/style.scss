@@ -1,0 +1,39 @@
+@import "./libs/fonts";
+@import "./libs/bootstrap-reboot.min";
+
+@import "base/variables";
+@import "./base/mixin.scss";
+
+*	{
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+    padding:0;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1140px;
+}
+
+.divider {
+    margin: 25px auto 0 auto;
+    width: 60px;
+    height: 3px;
+    background-color: $main-color;
+}
+
+
+@import "./bloks/promo";
+@import "./bloks/title";
+@import "./bloks/buttons";
+@import "./bloks/sidepanel";
+@import "./bloks/menu";
+@import "./bloks/about";
+@import "./bloks/text";
+@import "./bloks/resume";
+@import "./bloks/skills";
+@import "./bloks/portfolio";
+@import "./bloks/pricelist";
+@import "./bloks/contacts";
+@import './bloks/policy';
+@import './bloks/media';
