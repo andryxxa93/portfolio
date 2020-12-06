@@ -31,9 +31,18 @@
     .skills {
         .technics {
             &__grid {
-                grid-template: repeat(2,minmax(270px,auto))/repeat(3,270px);
+                grid-template: repeat(2,minmax(270px,auto))/repeat(auto-fit,270px);
                 justify-content: center;
             }
+        }
+        &__grid {
+            grid-template: repeat(2,minmax(70px,auto))/repeat(auto-fit, 350px);
+            justify-content: center;
+        }
+    }
+    .contacts {
+        .grid {
+            grid-template-columns: 350px 570px;
         }
     }
 }
@@ -67,15 +76,38 @@
             gap: 80px;
         }
     }
-    .skills {
-        .technics {
-            &__grid {
-                grid-template: repeat(2,minmax(270px,auto))/repeat(2,270px);
-                justify-content: center;
+    .portfolio {
+        &__wrapper {
+            grid-template: repeat(2,280px)/repeat(auto-fit,280px);
+            justify-content: center;
+            grid-auto-rows: 280px;
+            .vertical, .horizontal {
+                grid-row: unset;
+                grid-column: unset;
             }
         }
-        &__grid {
-            grid-template: repeat(2,minmax(70px,auto))/repeat(2,1fr);
+    }
+    .pricelist {
+        .grid {
+            padding: 0;
+            grid-template-columns: repeat(auto-fit, 340px);
+        }
+    }
+    .contacts {
+        .container {
+            .divider {
+                margin: 0 0 15px 0;
+            }
+        }
+        .grid {
+            grid-template-columns: 500px;
+            justify-content: center;
+            &__photo {
+                display: none;
+            }
+        }
+        &__form {
+            grid-template: 45px 190px 45px / repeat(2,240px);
         }
     }
     
@@ -120,12 +152,27 @@
             gap: 60px;
         }
     }
+    .portfolio {
+        padding-top: 40px;
+        &__wrapper {
+            margin-top: 40px;
+            gap: 20px;
+        }
+    }
+    .pricelist {
+        .grid {
+            justify-content: center;
+        }
+    }
 }
 
 @media (max-width: 576px) {
     .container {
         width: 100%;
         padding: 0 10px;
+        .divider {
+            margin: 15px auto 0 auto;
+        }
     }
     .title {
         &_fz48 {
@@ -162,27 +209,56 @@
     }
     .resume {
         padding-top: 46px;
-        .divider {
-            margin: 15px auto 0 auto;
-        }
         &__grid {
             padding: 40px 0 0 0;
             grid-template-columns: 1fr;
             gap: 40px;
         }
     }
+    .pricelist {
+        padding-top: 40px;
+        .grid {
+            margin-top: 20px;
+            padding: 0;
+            grid-template-columns: repeat(auto-fit, 300px);
+        }
+    }
     .skills {
-        .technics {
-            &__grid {
-                margin-top: 20px;
-                grid-template: repeat(2,minmax(270px,auto))/repeat(1,270px);
-                gap: 20px;
+        &__grid {
+            grid-template: repeat(2,minmax(70px,auto))/repeat(auto-fit, 300px);
+        }
+    }
+    .contacts {
+        .container {
+            .divider {
+                margin: 0 0 15px 0;
             }
         }
-        &__grid {
-            padding-top: 40px;
-            grid-template: repeat(2,minmax(70px,auto))/repeat(1,1fr);
-            gap: 40px;
+        .grid {
+            grid-template-columns: 300px;
+            justify-content: center;
+            &__photo {
+                display: none;
+            }
+        }
+        &__form {
+            grid-template: 45px 45px 190px 45px / 300px;
+        }
+        &__textarea {
+            grid-column: unset;
+        }
+        &__triggers {
+            justify-content: center;
+            grid-template: repeat(2, auto) / 220px;
+            row-gap: 20px;
+            grid-column: unset;
+        }
+        &__btn {
+            grid-row: 2 / 3;
+        }
+        &__policy {
+            padding-left: 10%;
+            line-height: 18px;
         }
     }
 }
